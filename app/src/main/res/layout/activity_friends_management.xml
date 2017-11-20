@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.roncherian.homework07.FriendsManagementActivity">
+
+
+    <!--<LinearLayout
+        android:id="@+id/linearLayoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonFriends"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@color/cast_libraries_material_featurehighlight_outer_highlight_default_color"
+            android:text="@string/friends"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/buttonAddNewFriend"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@color/cast_libraries_material_featurehighlight_outer_highlight_default_color"
+            android:text="@string/add_new_friend"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/buttonRequestPending"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/cast_libraries_material_featurehighlight_outer_highlight_default_color"
+            android:text="@string/request_pending"
+            android:textColor="@android:color/white" />
+
+
+    </LinearLayout>-->
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarFriends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSegCont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarFriends">
+
+        <info.hoang8f.android.segmented.SegmentedGroup xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/segmented2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            segmentedgroup:sc_border_width="2dp"
+            segmentedgroup:sc_corner_radius="10dp">
+
+            <RadioButton
+                android:id="@+id/buttonFriends"
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/friends"
+                android:layout_weight="1"/>
+
+            <RadioButton
+                android:id="@+id/buttonAddNewFriend"
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_new_friend"
+                android:layout_weight="1"/>
+
+            <RadioButton
+                android:id="@+id/buttonRequestPending"
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/request_pending"
+                android:layout_weight="1"/>
+        </info.hoang8f.android.segmented.SegmentedGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/containerView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/linearLayoutSegCont"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+</RelativeLayout>
